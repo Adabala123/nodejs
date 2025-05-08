@@ -26,7 +26,7 @@ jobs:
 
       - name: Docker login to ACR
         run: |
-          docker login testingacrs.azurecr.io --username testingacrs --password ${{ secrets.ACR_PASSWORD }}
+          az acr login --name testingacrs.azurecr.io
 
       - name: Build and push Docker image
         run: |
